@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness First</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-950 text-gray-200">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-900 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-white">
+                Fitness First
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="text-gray-400 hover:text-emerald-500 transition-colors duration-300 font-medium">Home</a>
+                <a href="#about" class="text-gray-400 hover:text-emerald-500 transition-colors duration-300 font-medium">About Us</a>
+                <a href="#programs" class="text-gray-400 hover:text-emerald-500 transition-colors duration-300 font-medium">Our Programs</a>
+                <a href="#gallery" class="text-gray-400 hover:text-emerald-500 transition-colors duration-300 font-medium">Gallery</a>
+                <a href="#bmi" class="text-gray-400 hover:text-emerald-500 transition-colors duration-300 font-medium">BMI</a>
+                <a href="#calories" class="text-gray-400 hover:text-emerald-500 transition-colors duration-300 font-medium">Calories</a>
+                <a href="#pricing" class="text-gray-400 hover:text-emerald-500 transition-colors duration-300 font-medium">Pricing</a>
+                <a href="#contact" class="text-gray-400 hover:text-emerald-500 transition-colors duration-300 font-medium">Contact</a>
+                <a href="#" class="bg-emerald-500 text-white px-6 py-2 rounded-full font-bold hover:bg-emerald-600 transition-colors duration-300 shadow-lg">Join Now</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 text-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 shadow-lg py-2">
+            <a href="#home" class="block px-4 py-2 text-gray-400 hover:bg-gray-700 hover:text-emerald-500">Home</a>
+            <a href="#about" class="block px-4 py-2 text-gray-400 hover:bg-gray-700 hover:text-emerald-500">About Us</a>
+            <a href="#programs" class="block px-4 py-2 text-gray-400 hover:bg-gray-700 hover:text-emerald-500">Our Programs</a>
+            <a href="#gallery" class="block px-4 py-2 text-gray-400 hover:bg-gray-700 hover:text-emerald-500">Gallery</a>
+            <a href="#bmi" class="block px-4 py-2 text-gray-400 hover:bg-gray-700 hover:text-emerald-500">BMI</a>
+            <a href="#calories" class="block px-4 py-2 text-gray-400 hover:bg-gray-700 hover:text-emerald-500">Calories</a>
+            <a href="#pricing" class="block px-4 py-2 text-gray-400 hover:bg-gray-700 hover:text-emerald-500">Pricing</a>
+            <a href="#contact" class="block px-4 py-2 text-emerald-500 font-bold hover:bg-gray-700">Join Now</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="text-white py-24 sm:py-32 lg:py-48 text-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1571019613454-1cb2f99b234b?fit=crop&w=1920&q=80'); background-size: cover; background-position: center;">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-wide">
+                    TRANSFORM<br>YOUR LIFE
+                </h1>
+                <p class="mt-4 text-lg sm:text-xl lg:text-2xl font-light max-w-2xl mx-auto">
+                    Join thousands who've already transformed their bodies and minds. State-of-the-art equipment, expert trainers, and unlimited motivation.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center mt-8 space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#pricing" class="inline-block bg-emerald-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-emerald-600 transition-colors duration-300 transform hover:scale-105 shadow-xl">
+                        START YOUR JOURNEY
+                    </a>
+                    <a href="#" class="inline-block border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-emerald-500 transition-colors duration-300 transform hover:scale-105">
+                        TOUR THE GYM
+                    </a>
+                </div>
+            </div>
+            <!-- Metrics Bar -->
+            <div class="absolute bottom-0 left-0 right-0 py-8 bg-gray-950 bg-opacity-70 backdrop-blur-sm">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-around items-center space-y-4 sm:space-y-0 text-center">
+                    <div>
+                        <p class="text-4xl font-bold text-emerald-500">100+</p>
+                        <p class="text-sm uppercase tracking-wide text-gray-400">Active Members</p>
+                    </div>
+                    <div>
+                        <p class="text-4xl font-bold text-emerald-500">50+</p>
+                        <p class="text-sm uppercase tracking-wide text-gray-400">Workout Programs</p>
+                    </div>
+                    <div>
+                        <p class="text-4xl font-bold text-emerald-500">10+</p>
+                        <p class="text-sm uppercase tracking-wide text-gray-400">Expert Trainers</p>
+                    </div>
+                    <div>
+                        <p class="text-4xl font-bold text-emerald-500">95%</p>
+                        <p class="text-sm uppercase tracking-wide text-gray-400">Success Rate</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-16 sm:py-24 bg-gray-950">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Our Commitment to Your Success</h2>
+                        <p class="text-lg text-gray-400 mb-6">
+                            At Fitness First, we believe that fitness is a journey, not a destination. Our mission is to provide you with the tools, environment, and encouragement you need to reach your full potential. We offer a holistic approach to wellness, focusing on physical strength, mental well-being, and a balanced lifestyle.
+                        </p>
+                        <p class="text-lg text-gray-400">
+                            Our state-of-the-art facilities are equipped with the latest machines, and our team of certified trainers is dedicated to creating personalized plans that fit your unique needs and goals.
+                        </p>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <img src="https://images.unsplash.com/photo-1549060279-7e16a09b307b?fit=crop&w=600&h=400&q=80" alt="Gym interior with people working out" class="w-full h-auto rounded-lg shadow-xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Programs Section -->
+        <section id="programs" class="bg-gray-900 py-16 sm:py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Our Programs</h2>
+                <p class="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
+                    From strength training to yoga, we have everything you need to achieve your fitness goals.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Program Card 1: Strength Training -->
+                    <div class="bg-gray-800 p-4 rounded-xl shadow-lg border border-gray-700 flex flex-col items-start text-left">
+                        <img src="i1.jpg" alt="Person lifting weights" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h3 class="text-xl font-bold text-white mb-2">Strength Training</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">
+                            Build muscle and increase strength with our comprehensive weight training programs.
+                        </p>
+                        <a href="#pricing" class="text-emerald-500 font-bold hover:underline transition-colors duration-300">
+                            Learn More →
+                        </a>
+                    </div>
+                    <!-- Program Card 2: Cardio -->
+                    <div class="bg-gray-800 p-4 rounded-xl shadow-lg border border-gray-700 flex flex-col items-start text-left">
+                        <img src="i2.jpg" alt="Person running on a treadmill" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h3 class="text-xl font-bold text-white mb-2">Cardio</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">
+                            Boost your endurance and burn calories with our state-of-the-art cardio equipment.
+                        </p>
+                        <a href="#pricing" class="text-emerald-500 font-bold hover:underline transition-colors duration-300">
+                            Learn More →
+                        </a>
+                    </div>
+                    <!-- Program Card 3: Group Classes -->
+                    <div class="bg-gray-800 p-4 rounded-xl shadow-lg border border-gray-700 flex flex-col items-start text-left">
+                        <img src="i3.webp" alt="Group of people in a fitness class" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h3 class="text-xl font-bold text-white mb-2">Group Classes</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">
+                            Join energetic group classes led by certified instructors in a motivating environment.
+                        </p>
+                        <a href="#pricing" class="text-emerald-500 font-bold hover:underline transition-colors duration-300">
+                            Learn More →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="bg-gray-950 py-16 sm:py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-12">What Our Members Say</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Review Card 1 -->
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-gray-700">
+                        <div class="rounded-full w-20 h-20 bg-gray-700 flex items-center justify-center text-4xl font-bold text-white mb-4">JW</div>
+                        <h4 class="text-lg font-bold text-white">James Wilson</h4>
+                        <p class="text-gray-400 text-sm mb-2">50 lbs down!</p>
+                        <div class="flex text-emerald-500 mb-4">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.6-1.5 2.376.54.512 1.378-.052 2.898-1.574 3.513-.787.31-1.724.08-2.376-.54l-1.586-1.586c-.652-.652-1.713-.652-2.365 0l-.707.707c-.652.652-.652 1.713 0 2.365l1.586 1.586a1.5 1.5 0 001.06.44c.4 0 .78-.157 1.06-.44l3.58-3.58c.277-.277.42-.652.42-1.06a1.5 1.5 0 00-.42-1.06L9.049 2.927zM10 18a8 8 0 100-16 8 8 0 000 16zM9.049 2.927c.3-.921 1.6-1.5 2.376.54.512 1.378-.052 2.898-1.574 3.513-.787.31-1.724.08-2.376-.54l-1.586-1.586c-.652-.652-1.713-.652-2.365 0l-.707.707c-.652.652-.652 1.713 0 2.365l1.586 1.586a1.5 1.5 0 001.06.44c.4 0 .78-.157 1.06-.44l3.58-3.58c.277-.277.42-.652.42-1.06a1.5 1.5 0 00-.42-1.06L9.049 2.927zM10 18a8 8 0 100-16 8 8 0 000 16z"></path><path d="M12.376 3.467L10 1a1 1 0 00-1 1v2a1 1 0 102 0V2a1 1 0 00-1-1zm-4.707 15.353l-1.414-1.414a1 1 0 00-1.414 1.414l1.414 1.414a1 1 0 001.414 0zm1.414-1.414l-1.414-1.414a1 1 0 00-1.414 1.414l1.414 1.414a1 1 0 001.414 0zM12.376 3.467L10 1a1 1 0 00-1 1v2a1 1 0 102 0V2a1 1 0 00-1-1z"></path></svg>
+                        </div>
+                        <p class="text-gray-400 text-sm">Transformed my life completely! I lost over 50 pounds and gained so much confidence. The personal training program is worth every penny.</p>
+                    </div>
+                    <!-- Review Card 2 -->
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-gray-700">
+                        <div class="rounded-full w-20 h-20 bg-gray-700 flex items-center justify-center text-4xl font-bold text-white mb-4">ED</div>
+                        <h4 class="text-lg font-bold text-white">Emily Davis</h4>
+                        <p class="text-gray-400 text-sm mb-2">New to fitness!</p>
+                        <div class="flex text-emerald-500 mb-4">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.6-1.5 2.376.54.512 1.378-.052 2.898-1.574 3.513-.787.31-1.724.08-2.376-.54l-1.586-1.586c-.652-.652-1.713-.652-2.365 0l-.707.707c-.652.652-.652 1.713 0 2.365l1.586 1.586a1.5 1.5 0 001.06.44c.4 0 .78-.157 1.06-.44l3.58-3.58c.277-.277.42-.652.42-1.06a1.5 1.5 0 00-.42-1.06L9.049 2.927zM10 18a8 8 0 100-16 8 8 0 000 16zM9.049 2.927c.3-.921 1.6-1.5 2.376.54.512 1.378-.052 2.898-1.574 3.513-.787.31-1.724.08-2.376-.54l-1.586-1.586c-.652-.652-1.713-.652-2.365 0l-.707.707c-.652.652-.652 1.713 0 2.365l1.586 1.586a1.5 1.5 0 001.06.44c.4 0 .78-.157 1.06-.44l3.58-3.58c.277-.277.42-.652.42-1.06a1.5 1.5 0 00-.42-1.06L9.049 2.927zM10 18a8 8 0 100-16 8 8 0 000 16z"></path><path d="M12.376 3.467L10 1a1 1 0 00-1 1v2a1 1 0 102 0V2a1 1 0 00-1-1zm-4.707 15.353l-1.414-1.414a1 1 0 00-1.414 1.414l1.414 1.414a1 1 0 001.414 0zm1.414-1.414l-1.414-1.414a1 1 0 00-1.414 1.414l1.414 1.414a1 1 0 001.414 0zM12.376 3.467L10 1a1 1 0 00-1 1v2a1 1 0 102 0V2a1 1 0 00-1-1z"></path></svg>
+                        </div>
+                        <p class="text-gray-400 text-sm">The group classes are so much fun! I look forward to every workout. The instructors are knowledgeable and motivating.</p>
+                    </div>
+                    <!-- Review Card 3 -->
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-gray-700">
+                        <div class="rounded-full w-20 h-20 bg-gray-700 flex items-center justify-center text-4xl font-bold text-white mb-4">AR</div>
+                        <h4 class="text-lg font-bold text-white">Alex Rodriguez</h4>
+                        <p class="text-gray-400 text-sm mb-2">Powerlifter</p>
+                        <div class="flex text-emerald-500 mb-4">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.6-1.5 2.376.54.512 1.378-.052 2.898-1.574 3.513-.787.31-1.724.08-2.376-.54l-1.586-1.586c-.652-.652-1.713-.652-2.365 0l-.707.707c-.652.652-.652 1.713 0 2.365l1.586 1.586a1.5 1.5 0 001.06.44c.4 0 .78-.157 1.06-.44l3.58-3.58c.277-.277.42-.652.42-1.06a1.5 1.5 0 00-.42-1.06L9.049 2.927zM10 18a8 8 0 100-16 8 8 0 000 16zM9.049 2.927c.3-.921 1.6-1.5 2.376.54.512 1.378-.052 2.898-1.574 3.513-.787.31-1.724.08-2.376-.54l-1.586-1.586c-.652-.652-1.713-.652-2.365 0l-.707.707c-.652.652-.652 1.713 0 2.365l1.586 1.586a1.5 1.5 0 001.06.44c.4 0 .78-.157 1.06-.44l3.58-3.58c.277-.277.42-.652.42-1.06a1.5 1.5 0 00-.42-1.06L9.049 2.927zM10 18a8 8 0 100-16 8 8 0 000 16z"></path><path d="M12.376 3.467L10 1a1 1 0 00-1 1v2a1 1 0 102 0V2a1 1 0 00-1-1zm-4.707 15.353l-1.414-1.414a1 1 0 00-1.414 1.414l1.414 1.414a1 1 0 001.414 0zm1.414-1.414l-1.414-1.414a1 1 0 00-1.414 1.414l1.414 1.414a1 1 0 001.414 0zM12.376 3.467L10 1a1 1 0 00-1 1v2a1 1 0 102 0V2a1 1 0 00-1-1z"></path></svg>
+                        </div>
+                        <p class="text-gray-400 text-sm">Best gym experience ever! The trainers are amazing and the equipment is top-notch. I've achieved goals I never thought possible.</p>
+                    </div>
+                    <!-- Review Card 4 -->
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-gray-700">
+                        <div class="rounded-full w-20 h-20 bg-gray-700 flex items-center justify-center text-4xl font-bold text-white mb-4">MJ</div>
+                        <h4 class="text-lg font-bold text-white">Maria Johnson</h4>
+                        <p class="text-gray-400 text-sm mb-2">Yoga enthusiast</p>
+                        <div class="flex text-emerald-500 mb-4">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.6-1.5 2.376.54.512 1.378-.052 2.898-1.574 3.513-.787.31-1.724.08-2.376-.54l-1.586-1.586c-.652-.652-1.713-.652-2.365 0l-.707.707c-.652.652-.652 1.713 0 2.365l1.586 1.586a1.5 1.5 0 001.06.44c.4 0 .78-.157 1.06-.44l3.58-3.58c.277-.277.42-.652.42-1.06a1.5 1.5 0 00-.42-1.06L9.049 2.927zM10 18a8 8 0 100-16 8 8 0 000 16zM9.049 2.927c.3-.921 1.6-1.5 2.376.54.512 1.378-.052 2.898-1.574 3.513-.787.31-1.724.08-2.376-.54l-1.586-1.586c-.652-.652-1.713-.652-2.365 0l-.707.707c-.652.652-.652 1.713 0 2.365l1.586 1.586a1.5 1.5 0 001.06.44c.4 0 .78-.157 1.06-.44l3.58-3.58c.277-.277.42-.652.42-1.06a1.5 1.5 0 00-.42-1.06L9.049 2.927zM10 18a8 8 0 100-16 8 8 0 000 16z"></path><path d="M12.376 3.467L10 1a1 1 0 00-1 1v2a1 1 0 102 0V2a1 1 0 00-1-1zm-4.707 15.353l-1.414-1.414a1 1 0 00-1.414 1.414l1.414 1.414a1 1 0 001.414 0zm1.414-1.414l-1.414-1.414a1 1 0 00-1.414 1.414l1.414 1.414a1 1 0 001.414 0zM12.376 3.467L10 1a1 1 0 00-1 1v2a1 1 0 102 0V2a1 1 0 00-1-1z"></path></svg>
+                        </div>
+                        <p class="text-gray-400 text-sm">The community here is amazing. Everyone supports each other, and the atmosphere makes you want to push harder every day.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-16 sm:py-24 bg-gray-950">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Our Members in Action</h2>
+                <p class="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
+                    See what our community is all about.
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <img src="223.jpg" alt="Person doing bicep curls" style="width: 400px;height:200px" class="w-full h-auto object-cover rounded-lg shadow-md">
+                    <img src="224.jpg" alt="Person on a treadmill" style="width: 400px;height:200px"class="w-full h-auto object-cover rounded-lg shadow-md">
+                    <img src="225.jpg" alt="Person stretching"style="width: 400px;height:200px" class="w-full h-auto object-cover rounded-lg shadow-md">
+                    <img src="226.jpg" alt="People in a yoga class" style="width: 400px;height:200px"class="w-full h-auto object-cover rounded-lg shadow-md">
+                    <img src="227.jpg" alt="People in a spin class" style="width: 400px;height:200px"class="w-full h-auto object-cover rounded-lg shadow-md">
+                    <img src="228.jpg" alt="Person doing HIIT training" style="width: 400px;height:200px"class="w-full h-auto object-cover rounded-lg shadow-md">
+                    <img src="229.jpg" alt="Group working out together"style="width: 400px;height:200px" class="w-full h-auto object-cover rounded-lg shadow-md">
+                    <img src="230.jpg" alt="Trainer with client" style="width: 400px;height:200px" class="w-full h-auto object-cover rounded-lg shadow-md">
+                </div>
+            </div>
+        </section>
+
+        <!-- BMI Calculator Section -->
+        <section id="bmi" class="py-16 sm:py-24 bg-gray-900">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-xl mx-auto text-center">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">BMI Calculator</h2>
+                    <p class="text-lg text-gray-400 mb-8">
+                        Calculate your Body Mass Index to understand your fitness level.
+                    </p>
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg space-y-4">
+                        <div class="flex flex-col items-start text-left">
+                            <label for="bmi-weight" class="text-gray-400 font-medium mb-1">Weight (kg)</label>
+                            <input type="number" id="bmi-weight" class="w-full p-3 rounded-lg bg-gray-700 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all duration-300" placeholder="Enter your weight in kg">
+                        </div>
+                        <div class="flex flex-col items-start text-left">
+                            <label for="bmi-height" class="text-gray-400 font-medium mb-1">Height (cm)</label>
+                            <input type="number" id="bmi-height" class="w-full p-3 rounded-lg bg-gray-700 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all duration-300" placeholder="Enter your height in cm">
+                        </div>
+                        <button id="bmi-calculate-btn" class="mt-4 w-full bg-emerald-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-emerald-600 transition-colors duration-300 shadow-xl">
+                            Calculate BMI
+                        </button>
+                    </div>
+                    <div id="bmi-result" class="mt-8 text-center bg-gray-800 p-6 rounded-xl shadow-lg">
+                        <!-- BMI result will be displayed here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Daily Calorie Needs Calculator Section -->
+        <section id="calories" class="py-16 sm:py-24 bg-gray-950">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-xl mx-auto text-center">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Daily Calorie Needs</h2>
+                    <p class="text-lg text-gray-400 mb-8">
+                        Estimate your daily calorie intake to maintain or change your weight.
+                    </p>
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg space-y-4">
+                        <div class="flex flex-col items-start text-left">
+                            <label for="cal-gender" class="text-gray-400 font-medium mb-1">Gender</label>
+                            <select id="cal-gender" class="w-full p-3 rounded-lg bg-gray-700 text-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col items-start text-left">
+                            <label for="cal-age" class="text-gray-400 font-medium mb-1">Age (years)</label>
+                            <input type="number" id="cal-age" class="w-full p-3 rounded-lg bg-gray-700 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all duration-300" placeholder="Enter your age">
+                        </div>
+                        <div class="flex flex-col items-start text-left">
+                            <label for="cal-height" class="text-gray-400 font-medium mb-1">Height (cm)</label>
+                            <input type="number" id="cal-height" class="w-full p-3 rounded-lg bg-gray-700 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all duration-300" placeholder="Enter your height">
+                        </div>
+                        <div class="flex flex-col items-start text-left">
+                            <label for="cal-weight" class="text-gray-400 font-medium mb-1">Weight (kg)</label>
+                            <input type="number" id="cal-weight" class="w-full p-3 rounded-lg bg-gray-700 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all duration-300" placeholder="Enter your weight">
+                        </div>
+                        <div class="flex flex-col items-start text-left">
+                            <label for="cal-activity" class="text-gray-400 font-medium mb-1">Activity Level</label>
+                            <select id="cal-activity" class="w-full p-3 rounded-lg bg-gray-700 text-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                                <option value="1.2">Sedentary (little or no exercise)</option>
+                                <option value="1.375">Lightly Active (1-3 days/week)</option>
+                                <option value="1.55">Moderately Active (3-5 days/week)</option>
+                                <option value="1.725">Very Active (6-7 days/week)</option>
+                                <option value="1.9">Extra Active (very hard exercise)</option>
+                            </select>
+                        </div>
+                        <button id="cal-calculate-btn" class="mt-4 w-full bg-emerald-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-emerald-600 transition-colors duration-300 shadow-xl">
+                            Calculate Calories
+                        </button>
+                    </div>
+                    <div id="cal-result" class="mt-8 text-center bg-gray-800 p-6 rounded-xl shadow-lg">
+                        <!-- Calorie result will be displayed here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-16 sm:py-24 bg-gray-950">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Choose Your Plan</h2>
+                <p class="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
+                    Affordable and flexible membership options designed to fit your lifestyle and budget.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Pricing Card 1 -->
+                    <div class="bg-gray-800 text-gray-200 p-8 rounded-xl shadow-lg border border-gray-700">
+                        <h3 class="text-2xl font-bold text-white">Basic</h3>
+                        <p class="text-5xl font-extrabold text-emerald-500 my-4">₹999<span class="text-lg text-gray-400 font-normal">/mo</span></p>
+                        <ul class="text-left text-gray-400 space-y-3 mb-6">
+                            <li>✔ Access to all gym equipment</li>
+                            <li>✔ 24/7 access</li>
+                            <li>❌ Group classes</li>
+                            <li>❌ Personal training sessions</li>
+                        </ul>
+                        <a href="#" class="block w-full text-center bg-emerald-500 text-white py-3 rounded-full font-bold hover:bg-emerald-600 transition-colors duration-300">Select Plan</a>
+                    </div>
+                    <!-- Pricing Card 2 (Recommended) -->
+                    <div class="bg-emerald-500 text-white p-8 rounded-xl shadow-lg border-4 border-emerald-600 transform scale-105 relative z-10">
+                        <div class="absolute top-0 right-0 -mt-3 -mr-3 bg-white text-emerald-500 text-xs font-bold px-3 py-1 rounded-full uppercase">
+                            Popular
+                        </div>
+                        <h3 class="text-2xl font-bold">Standard</h3>
+                        <p class="text-5xl font-extrabold my-4">₹1699<span class="text-lg font-normal">/mo</span></p>
+                        <ul class="text-left space-y-3 mb-6">
+                            <li>✔ All Basic features</li>
+                            <li>✔ Unlimited group classes</li>
+                            <li>✔ 1 free personal training session</li>
+                            <li>❌ Nutritional guidance</li>
+                        </ul>
+                        <a href="#" class="block w-full text-center bg-white text-emerald-500 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors duration-300">Select Plan</a>
+                    </div>
+                    <!-- Pricing Card 3 -->
+                    <div class="bg-gray-800 text-gray-200 p-8 rounded-xl shadow-lg border border-gray-700">
+                        <h3 class="text-2xl font-bold text-white">Premium</h3>
+                        <p class="text-5xl font-extrabold text-emerald-500 my-4">₹2499<span class="text-lg text-gray-400 font-normal">/mo</span></p>
+                        <ul class="text-left text-gray-400 space-y-3 mb-6">
+                            <li>✔ All Standard features</li>
+                            <li>✔ Unlimited personal training</li>
+                            <li>✔ Nutritional guidance</li>
+                            <li>✔ Access to all locations</li>
+                        </ul>
+                        <a href="#" class="block w-full text-center bg-emerald-500 text-white py-3 rounded-full font-bold hover:bg-emerald-600 transition-colors duration-300">Select Plan</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="bg-emerald-500 text-white py-16 sm:py-24 text-center">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to Start Your Fitness Journey?</h2>
+                <p class="text-lg mb-8 max-w-3xl mx-auto">
+                    Join Fitness First today and become a part of a community dedicated to health and wellness.
+                </p>
+                <a href="#contact" class="inline-block bg-white text-emerald-500 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors duration-300 transform hover:scale-105 shadow-xl">
+                    Get in Touch
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Footer Column 1: Company Info & Socials -->
+            <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                <h3 class="text-3xl font-bold text-white mb-2">FITNESS FIRST</h3>
+                <p class="text-sm text-gray-400 max-w-sm">Transform your life with our state-of-the-art facilities, expert trainers, and a supportive community.</p>
+                <div class="mt-6 flex space-x-4">
+                    <a href="#" class="text-white hover:text-emerald-500 transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.875v-6.988h-2.54V12h2.54V9.797c0-2.502 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.774-1.63 1.572V12h3.298l-.52 3.991h-2.778v6.988C18.343 21.128 22 16.991 22 12z"></path></svg>
+                    </a>
+                    <a href="#" class="text-white hover:text-emerald-500 transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.309 6.883a.75.75 0 011.06 1.06l-4.12 4.12a.75.75 0 01-1.06 0l-1.88-1.88a.75.75 0 111.06-1.06l1.35 1.35 3.59-3.59z"></path></svg>
+                    </a>
+                    <a href="#" class="text-white hover:text-emerald-500 transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 12h-3v3.75c0 .414-.336.75-.75.75H13c-.414 0-.75-.336-.75-.75V14h-3a.75.75 0 01-.75-.75V13c0-.414.336-.75.75-.75h3v-2.75a.75.75 0 01.75-.75H13c.414 0 .75.336.75.75V11.5h3a.75.75 0 01.75.75V13c0 .414-.336.75-.75.75z"></path></svg>
+                    </a>
+                </div>
+            </div>
+            <!-- Footer Column 2: Quick Links -->
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Quick Links</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#home" class="hover:text-white transition-colors duration-300">Home</a></li>
+                    <li><a href="#about" class="hover:text-white transition-colors duration-300">About Us</a></li>
+                    <li><a href="#programs" class="hover:text-white transition-colors duration-300">Classes</a></li>
+                    <li><a href="#pricing" class="hover:text-white transition-colors duration-300">Membership</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-300">Trainers</a></li>
+                    <li><a href="#contact" class="hover:text-white transition-colors duration-300">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Footer Column 3: Services -->
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Services</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white transition-colors duration-300">Personal Training</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-300">Group Classes</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-300">Nutritional Coaching</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-300">Massage Therapy</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-300">Corporate Wellness</a></li>
+                </ul>
+            </div>
+            <!-- Footer Column 4: Contact Info -->
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Contact</h3>
+                <div class="space-y-4 text-sm">
+                    <p class="flex items-start">
+                        <svg class="w-5 h-5 text-emerald-500 mt-0.5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M11.54 22.351l.07.07.072-.071a1.272 1.272 0 00.158-.236 7.197 7.197 0 00.569-1.233 11.235 11.235 0 00.44-1.282c.162-.48.3-1.047.362-1.621.06-.575.053-1.127-.008-1.579-.06-.452-.224-1.02-.45-1.564a.82.82 0 01-.11-.219l-4.226 4.226a1.737 1.737 0 01-2.455 0L6.72 13.06a.75.75 0 010-1.06L11.75 7.75l1.06 1.06-4.226 4.226c.204.204.402.421.575.666.216.31.397.644.544.986.13.31.222.618.28.874.055.247.078.48.064.697-.014.217-.06.444-.138.682a6.975 6.975 0 00-.594 1.488 11.235 11.235 0 00-1.077 2.15l-1.638 1.64c-.29-.028-.59-.044-.9-.044-5.523 0-10 4.477-10 10h22c0-5.523-4.477-10-10-10z"></path></svg>
+                        <span>123 Fitness Avenue, NY</span>
+                    </p>
+                    <p class="flex items-center">
+                        <svg class="w-5 h-5 text-emerald-500 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.42 12.63l1.58 1.58c-1.15 1.15-2.61 1.94-4.21 2.29l.34-1.78a6.975 6.975 0 01-1.76-1.76l-1.78.34c.35-1.6 1.14-3.06 2.29-4.21l1.58 1.58a3.754 3.754 0 001.06 1.06zm-3.09 3.09l-1.58-1.58a3.754 3.754 0 00-1.06-1.06l1.58-1.58c1.15-1.15 2.61-1.94 4.21-2.29l-.34 1.78c-1.6 0-3.06.79-4.21 1.94zm2.12 2.12a.75.75 0 01-1.06 0l-1.58-1.58c-.59-.59-1.01-1.32-1.29-2.09l1.78-.34a.75.75 0 01.75.75v.21l-1.35 1.35c.18.18.39.35.61.52l1.35-1.35v.21c0 .414.336.75.75.75h.21l1.35 1.35c-.18.18-.35.39-.52.61l1.35-1.35a.75.75 0 01.75.75v.21c-.414 0-.75.336-.75.75l1.35-1.35a.75.75 0 01.75-.75h.21a.75.75 0 01.75.75v.21c0 .414.336.75.75.75h.21c.414 0 .75.336.75.75v.21a.75.75 0 01-.75.75h-.21c-.414 0-.75.336-.75.75l-1.35 1.35c.18.18.39.35.61.52l1.35-1.35a.75.75 0 01.75.75v.21c-.414 0-.75.336-.75.75l1.35-1.35a.75.75 0 01.75.75v.21c.18.18.35.39.52.61l1.35-1.35v.21c.414 0 .75.336.75.75h.21c.414 0 .75.336.75.75l1.35 1.35c.18.18.39.35.61.52l1.35-1.35a.75.75 0 01.75.75v.21c-.414 0-.75.336-.75.75l1.35-1.35a.75.75 0 01.75.75v.21c.18.18.35.39.52.61l1.35-1.35v.21c.414 0 .75.336.75.75h-.21a.75.75 0 01-.75-.75v-.21c0-.414-.336-.75-.75-.75h-.21a.75.75 0 01-.75-.75v-.21c0-.414-.336-.75-.75-.75l-1.35 1.35c-.18.18-.39.35-.61.52l-1.35-1.35v-.21c0-.414-.336-.75-.75-.75h-.21c-.414 0-.75.336-.75.75v.21c0 .414-.336.75-.75.75h-.21c-.414 0-.75.336-.75.75v.21a.75.75 0 01-.75.75v-.21c0-.414-.336-.75-.75-.75h-.21c-.414 0-.75.336-.75.75v.21c0 .414-.336.75-.75.75h-.21c-.414 0-.75.336-.75.75v.21a.75.75 0 01.75-.75z"></path></svg>
+                        <span>info@fitnessfirst.com</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-gray-500 text-sm mt-8 border-t border-gray-700 pt-8">
+            &copy; 2024 Fitness First. All rights reserved. | <a href="#" class="hover:text-white">Privacy Policy</a> | <a href="#" class="hover:text-white">Terms of Service</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle and Gemini API Integration -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            var mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Close mobile menu when a link is clicked
+        var mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // JavaScript for BMI Calculator
+        document.getElementById('bmi-calculate-btn').addEventListener('click', function() {
+            const weight = parseFloat(document.getElementById('bmi-weight').value);
+            const height = parseFloat(document.getElementById('bmi-height').value);
+            const resultDiv = document.getElementById('bmi-result');
+
+            if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
+                resultDiv.innerHTML = '<p class="text-red-400">Please enter valid weight and height.</p>';
+                return;
+            }
+
+            const heightMeters = height / 100;
+            const bmi = (weight / (heightMeters * heightMeters)).toFixed(2);
+            
+            let category;
+            if (bmi < 18.5) {
+                category = 'Underweight';
+            } else if (bmi >= 18.5 && bmi < 24.9) {
+                category = 'Normal weight';
+            } else if (bmi >= 25 && bmi < 29.9) {
+                category = 'Overweight';
+            } else {
+                category = 'Obesity';
+            }
+
+            resultDiv.innerHTML = `
+                <p class="text-lg font-bold text-white mb-2">Your BMI is: ${bmi}</p>
+                <p class="text-md text-gray-400">Category: <span class="font-semibold text-emerald-500">${category}</span></p>
+            `;
+        });
+
+        // JavaScript for Daily Calorie Needs Calculator
+        document.getElementById('cal-calculate-btn').addEventListener('click', function() {
+            const gender = document.getElementById('cal-gender').value;
+            const age = parseFloat(document.getElementById('cal-age').value);
+            const height = parseFloat(document.getElementById('cal-height').value);
+            const weight = parseFloat(document.getElementById('cal-weight').value);
+            const activityFactor = parseFloat(document.getElementById('cal-activity').value);
+            const resultDiv = document.getElementById('cal-result');
+
+            if (isNaN(age) || isNaN(height) || isNaN(weight) || age <= 0 || height <= 0 || weight <= 0) {
+                resultDiv.innerHTML = '<p class="text-red-400">Please enter valid information.</p>';
+                return;
+            }
+
+            let bmr;
+            if (gender === 'male') {
+                bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5;
+            } else { // female
+                bmr = (10 * weight) + (6.25 * height) - (5 * age) - 161;
+            }
+
+            const dailyCalories = (bmr * activityFactor).toFixed(0);
+
+            resultDiv.innerHTML = `
+                <p class="text-lg font-bold text-white mb-2">Your estimated daily calorie needs:</p>
+                <p class="text-5xl font-extrabold text-emerald-500">${dailyCalories}</p>
+                <p class="text-md text-gray-400">calories/day</p>
+            `;
+        });
+    </script>
+</body>
+</html>
